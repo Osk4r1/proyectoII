@@ -1,0 +1,57 @@
+<% include _header_login %>
+
+<div class="find-job section text-center">
+  <section class="find-job section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Bienvenido de nuevo</h1>
+          <br />
+          <div class="content">
+            <form action="/signinA" method="post">
+                
+              <div class="col-sm-12 center">
+                <label for="inputEmail" class="col-sm-2 col-form-label"
+                  >Email</label
+                >
+                <div class="col-sm-6">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="ejemplo@espe.edu.ec"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-sm-12 center">
+                <br />
+                <label for="inputPassword" class="col-sm-2 col-form-label"
+                  >Password</label
+                >
+                <div class="col-sm-6">
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <br />
+                <button type="submit" class="btn-lg btn-danger">
+                  Iniciar Sesión
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<% include _footer_login %>

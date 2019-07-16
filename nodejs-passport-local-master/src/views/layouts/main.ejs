@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PasantÃ­as ESPE</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/flatly/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/src/views/css/login.css" type="text/css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/jasny-bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-select.min.css"
+      type="text/css"
+    />
+    <!-- Material CSS -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/material-kit.css"
+      type="text/css"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/font-awesome.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./assets/fonts/themify-icons.css" />
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="./assets/extras/animate.css" type="text/css" />
+    <!-- Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="./assets/extras/owl.carousel.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/extras/owl.theme.css"
+      type="text/css"
+    />
+    <!-- Rev Slider CSS -->
+    <link
+      rel="stylesheet"
+      href="./assets/extras/settings.css"
+      type="text/css"
+    />
+    <!-- Slicknav js -->
+    <link rel="stylesheet" href="./assets/css/slicknav.css" type="text/css" />
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
+    <!-- Responsive CSS Styles -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" type="text/css" />
+
+    <!-- Color CSS Styles  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/colors/red.css"
+      media="screen"
+    />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+        <img
+          src="https://www.wearesevenhills.com/wp-content/uploads/2015/10/Workfinder-570x570.png?35241e"
+          width="75"
+          height="75"
+          alt=""
+        />
+        WorkFinder ESPE
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <% if (user) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Salir</a>
+          </li>
+          <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/signin">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Registrarse</a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!--
+    <% if (!user) { %>
+    <a href="/signin">Signin</a>
+    <a href="/signup">Signup</a>
+    <% } else { %>
+    <a href="/logout">Logout</a>
+    <a href="/profile">Profle</a>
+    <% } %>
+    -->
+
+      <%if (signinMessage.length > 0) {%>
+      <div class="alert alert-danger">
+        <p><%= signinMessage %></p>
+      </div>
+      <% } %> <%if (signupMessage.length > 0) {%>
+      <div class="alert alert-danger">
+        <p><%= signupMessage %></p>
+      </div>
+      <% } %> <%- body %>
+    </div>
+  </body>
+</html>
